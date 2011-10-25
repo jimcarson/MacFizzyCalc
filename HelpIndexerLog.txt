@@ -1,0 +1,19 @@
+droot.html -- File has KEYWORDS meta tag content being indexed.
+gc.html -- File has KEYWORDS meta tag content being indexed.
+index.html -- File has KEYWORDS meta tag content being indexed.
+droot.html -- File has DESCRIPTION meta tag used for abstract.
+gc.html -- File has DESCRIPTION meta tag used for abstract.
+index.html -- Finished parsing
+droot.html -- Finished parsing
+gc.html -- Finished parsing
+coordinates.html -- File has KEYWORDS meta tag content being indexed.
+coordinates.html -- Finished parsing
+accuracy.html -- File has KEYWORDS meta tag content being indexed.
+waas.html -- File has KEYWORDS meta tag content being indexed.
+accuracy.html -- File has DESCRIPTION meta tag used for abstract.
+waas.html -- File has DESCRIPTION meta tag used for abstract.
+waas.html -- Finished parsing
+accuracy.html -- Finished parsing
+convert.html -- File has KEYWORDS meta tag content being indexed.
+convert.html -- File has DESCRIPTION meta tag used for abstract.
+convert.html -- Finished parsing
