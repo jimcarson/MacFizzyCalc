@@ -6,4 +6,6 @@ http://www.jimcarson.com/macfizzycalc/
 
 2.2.1 - 2011-08-28  Updated a bug where entering garbage in the WAAS pulldown would cause a crash.  I haven't uploaded the built binary because of Xcode/code signing issues and unless I have time to deal with these, will just post the binary to my web site.
 
+Now that it's off the App Store, here's the download link: http://www.jimcarson.com/macfizzycalc/fizzy32bit.tgz
+
 FizzyCalc version is Copyright (c) 2011 by Jim Carson (Geocaching.com: jim_carson). It is based on David Knapp's FizzyCalc, which is Copyright (c) 2003 by David Knapp (aka FizzyMagic). 
