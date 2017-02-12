@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38C48E5D13F7516D0058C5F3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C48E5C13F7516D0058C5F3 /* Cocoa.framework */; };
+		38C48E6713F7516D0058C5F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38C48E6513F7516D0058C5F3 /* InfoPlist.strings */; };
+		38C48E6913F7516D0058C5F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C48E6813F7516D0058C5F3 /* main.m */; };
+		38C48E6D13F7516D0058C5F3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 38C48E6B13F7516D0058C5F3 /* Credits.rtf */; };
+		38C48E7013F7516D0058C5F3 /* MacFizzyCalcAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38C48E6F13F7516D0058C5F3 /* MacFizzyCalcAppDelegate.mm */; };
+		38C48E7313F7516D0058C5F3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C48E7113F7516D0058C5F3 /* MainMenu.xib */; };
+		38C48E7C13F7516D0058C5F3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C48E5C13F7516D0058C5F3 /* Cocoa.framework */; };
+		38C48E9313F752100058C5F3 /* Coord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38C48E9213F752100058C5F3 /* Coord.cpp */; };
+		38CC94B113F8399600EBFAE1 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 38CC94B013F8399600EBFAE1 /* README */; };
+		38E4F13713F7572500E7AE6D /* gpl3.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 38E4F13613F7572500E7AE6D /* gpl3.rtf */; };
+		38E96B0213F76AA5001F56B7 /* penrose.icns in Resources */ = {isa = PBXBuildFile; fileRef = 38E96B0113F76AA5001F56B7 /* penrose.icns */; };
+		38ED8A7B13F833170079C7ED /* FizzyCalcHelp in Resources */ = {isa = PBXBuildFile; fileRef = 38ED8A7A13F833170079C7ED /* FizzyCalcHelp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38C48E7D13F7516D0058C5F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38C48E4F13F7516D0058C5F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38C48E5713F7516D0058C5F3;
+			remoteInfo = MacFizzyCalc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		386AFF1D13F9D89500AE6533 /* FizzyCalc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FizzyCalc.entitlements; sourceTree = "<group>"; };
+		38C48E5C13F7516D0058C5F3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		38C48E5F13F7516D0058C5F3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		38C48E6013F7516D0058C5F3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		38C48E6113F7516D0058C5F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		38C48E6413F7516D0058C5F3 /* FizzyCalc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FizzyCalc-Info.plist"; sourceTree = "<group>"; };
+		38C48E6613F7516D0058C5F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		38C48E6813F7516D0058C5F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		38C48E6A13F7516D0058C5F3 /* MacFizzyCalc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacFizzyCalc-Prefix.pch"; sourceTree = "<group>"; };
+		38C48E6C13F7516D0058C5F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		38C48E6E13F7516D0058C5F3 /* MacFizzyCalcAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacFizzyCalcAppDelegate.h; sourceTree = "<group>"; };
+		38C48E6F13F7516D0058C5F3 /* MacFizzyCalcAppDelegate.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = MacFizzyCalcAppDelegate.mm; sourceTree = "<group>"; };
+		38C48E7213F7516D0058C5F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		38C48E7913F7516D0058C5F3 /* FizzyCalcTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FizzyCalcTests.octest; path = /Users/jim/MacFizzyCalc/build/Debug/FizzyCalcTests.octest; sourceTree = "<absolute>"; };
+		38C48E9113F751F10058C5F3 /* Coord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coord.h; sourceTree = "<group>"; };
+		38C48E9213F752100058C5F3 /* Coord.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Coord.cpp; sourceTree = "<group>"; };
+		38C720551E50FF0C00449FA6 /* FizzyCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FizzyCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38CC94B013F8399600EBFAE1 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		38E4F13613F7572500E7AE6D /* gpl3.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = gpl3.rtf; sourceTree = "<group>"; };
+		38E96B0113F76AA5001F56B7 /* penrose.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = penrose.icns; path = ../penrose.icns; sourceTree = "<group>"; };
+		38ED8A7A13F833170079C7ED /* FizzyCalcHelp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FizzyCalcHelp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38C48E5513F7516D0058C5F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38C48E5D13F7516D0058C5F3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38C48E7513F7516D0058C5F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38C48E7C13F7516D0058C5F3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38A7D7B013F8C7FB00AC2397 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				38E4F13613F7572500E7AE6D /* gpl3.rtf */,
+				38C48E6B13F7516D0058C5F3 /* Credits.rtf */,
+				38ED8A7A13F833170079C7ED /* FizzyCalcHelp */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		38A7D7B213F8C85900AC2397 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				38C48E9113F751F10058C5F3 /* Coord.h */,
+				38C48E9213F752100058C5F3 /* Coord.cpp */,
+				38C48E6E13F7516D0058C5F3 /* MacFizzyCalcAppDelegate.h */,
+				38C48E6F13F7516D0058C5F3 /* MacFizzyCalcAppDelegate.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		38C48E4D13F7516D0058C5F3 = {
+			isa = PBXGroup;
+			children = (
+				38C48E6213F7516D0058C5F3 /* FizzyCalc */,
+				38C48E5B13F7516D0058C5F3 /* Frameworks */,
+				38C720551E50FF0C00449FA6 /* FizzyCalc.app */,
+			);
+			sourceTree = "<group>";
+		};
+		38C48E5B13F7516D0058C5F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38C48E5C13F7516D0058C5F3 /* Cocoa.framework */,
+				38C48E5E13F7516D0058C5F3 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38C48E5E13F7516D0058C5F3 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38C48E5F13F7516D0058C5F3 /* AppKit.framework */,
+				38C48E6013F7516D0058C5F3 /* CoreData.framework */,
+				38C48E6113F7516D0058C5F3 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		38C48E6213F7516D0058C5F3 /* FizzyCalc */ = {
+			isa = PBXGroup;
+			children = (
+				386AFF1D13F9D89500AE6533 /* FizzyCalc.entitlements */,
+				38A7D7B013F8C7FB00AC2397 /* Resources */,
+				38A7D7B213F8C85900AC2397 /* Classes */,
+				38C48E6313F7516D0058C5F3 /* Supporting Files */,
+			);
+			name = FizzyCalc;
+			path = MacFizzyCalc;
+			sourceTree = "<group>";
+		};
+		38C48E6313F7516D0058C5F3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38C48E7113F7516D0058C5F3 /* MainMenu.xib */,
+				38E96B0113F76AA5001F56B7 /* penrose.icns */,
+				38C48E6413F7516D0058C5F3 /* FizzyCalc-Info.plist */,
+				38CC94B013F8399600EBFAE1 /* README */,
+				38C48E6513F7516D0058C5F3 /* InfoPlist.strings */,
+				38C48E6813F7516D0058C5F3 /* main.m */,
+				38C48E6A13F7516D0058C5F3 /* MacFizzyCalc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38C48E5713F7516D0058C5F3 /* FizzyCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38C48E8B13F7516D0058C5F3 /* Build configuration list for PBXNativeTarget "FizzyCalc" */;
+			buildPhases = (
+				38C48E5413F7516D0058C5F3 /* Sources */,
+				38C48E5513F7516D0058C5F3 /* Frameworks */,
+				38C48E5613F7516D0058C5F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FizzyCalc;
+			productName = MacFizzyCalc;
+			productReference = 38C720551E50FF0C00449FA6 /* FizzyCalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38C48E7813F7516D0058C5F3 /* FizzyCalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38C48E8E13F7516D0058C5F3 /* Build configuration list for PBXNativeTarget "FizzyCalcTests" */;
+			buildPhases = (
+				38C48E7413F7516D0058C5F3 /* Sources */,
+				38C48E7513F7516D0058C5F3 /* Frameworks */,
+				38C48E7613F7516D0058C5F3 /* Resources */,
+				38C48E7713F7516D0058C5F3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38C48E7E13F7516D0058C5F3 /* PBXTargetDependency */,
+			);
+			name = FizzyCalcTests;
+			productName = MacFizzyCalcTests;
+			productReference = 38C48E7913F7516D0058C5F3 /* FizzyCalcTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38C48E4F13F7516D0058C5F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				TargetAttributes = {
+					38C48E5713F7516D0058C5F3 = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 38C48E5213F7516D0058C5F3 /* Build configuration list for PBXProject "FizzyCalc" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 38C48E4D13F7516D0058C5F3;
+			productRefGroup = 38C48E4D13F7516D0058C5F3;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38C48E5713F7516D0058C5F3 /* FizzyCalc */,
+				38C48E7813F7516D0058C5F3 /* FizzyCalcTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38C48E5613F7516D0058C5F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38C48E6713F7516D0058C5F3 /* InfoPlist.strings in Resources */,
+				38C48E6D13F7516D0058C5F3 /* Credits.rtf in Resources */,
+				38C48E7313F7516D0058C5F3 /* MainMenu.xib in Resources */,
+				38E4F13713F7572500E7AE6D /* gpl3.rtf in Resources */,
+				38E96B0213F76AA5001F56B7 /* penrose.icns in Resources */,
+				38ED8A7B13F833170079C7ED /* FizzyCalcHelp in Resources */,
+				38CC94B113F8399600EBFAE1 /* README in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38C48E7613F7516D0058C5F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38C48E7713F7516D0058C5F3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38C48E5413F7516D0058C5F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38C48E6913F7516D0058C5F3 /* main.m in Sources */,
+				38C48E7013F7516D0058C5F3 /* MacFizzyCalcAppDelegate.mm in Sources */,
+				38C48E9313F752100058C5F3 /* Coord.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38C48E7413F7516D0058C5F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38C48E7E13F7516D0058C5F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38C48E5713F7516D0058C5F3 /* FizzyCalc */;
+			targetProxy = 38C48E7D13F7516D0058C5F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38C48E6513F7516D0058C5F3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38C48E6613F7516D0058C5F3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		38C48E6B13F7516D0058C5F3 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38C48E6C13F7516D0058C5F3 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		38C48E7113F7516D0058C5F3 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38C48E7213F7516D0058C5F3 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38C48E8913F7516D0058C5F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2.0;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		38C48E8A13F7516D0058C5F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 2.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		38C48E8C13F7516D0058C5F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MacFizzyCalc/FizzyCalc.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CURRENT_PROJECT_VERSION = 2.3;
+				DEVELOPMENT_TEAM = S3668LTE35;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "MacFizzyCalc/FizzyCalc-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimcarson.MacFizzyCalc;
+				PRODUCT_NAME = FizzyCalc;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		38C48E8D13F7516D0058C5F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MacFizzyCalc/FizzyCalc.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CURRENT_PROJECT_VERSION = 2.3;
+				DEVELOPMENT_TEAM = S3668LTE35;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "MacFizzyCalc/FizzyCalc-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimcarson.MacFizzyCalc;
+				PRODUCT_NAME = FizzyCalc;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		38C48E8F13F7516D0058C5F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MacFizzyCalc.app/Contents/MacOS/MacFizzyCalc";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacFizzyCalc/MacFizzyCalc-Prefix.pch";
+				INFOPLIST_FILE = "MacFizzyCalcTests/FizzyCalcTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "jimcarson.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = FizzyCalcTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		38C48E9013F7516D0058C5F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MacFizzyCalc.app/Contents/MacOS/MacFizzyCalc";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacFizzyCalc/MacFizzyCalc-Prefix.pch";
+				INFOPLIST_FILE = "MacFizzyCalcTests/FizzyCalcTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "jimcarson.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = FizzyCalcTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38C48E5213F7516D0058C5F3 /* Build configuration list for PBXProject "FizzyCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38C48E8913F7516D0058C5F3 /* Debug */,
+				38C48E8A13F7516D0058C5F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38C48E8B13F7516D0058C5F3 /* Build configuration list for PBXNativeTarget "FizzyCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38C48E8C13F7516D0058C5F3 /* Debug */,
+				38C48E8D13F7516D0058C5F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38C48E8E13F7516D0058C5F3 /* Build configuration list for PBXNativeTarget "FizzyCalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38C48E8F13F7516D0058C5F3 /* Debug */,
+				38C48E9013F7516D0058C5F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38C48E4F13F7516D0058C5F3 /* Project object */;
+}

@@ -65,7 +65,7 @@ double units_to_m[UNITS] = { M_TO_FEET, M_TO_KILO, M_TO_M, M_TO_MILE, M_TO_NAUT,
 /*
  
  WAAS (and equivalent) satellite information was slightly out of date.  Information is current as of 8/8/2011 -- Jim Carson
- 
+ And removed from Fizzycalc because it was already obsolete ;-(   2017-02-12
  Sources: 
  http://www.kowoma.de/en/gps/waas_egnos.htm
  http://gpsinformation.net/exe/waas.html
@@ -401,7 +401,7 @@ WAAS Satellites[9] = {
     std::string RetVal;
     ulNumber = cs->GetNumber([[GC_input stringValue] UTF8String]);
     if (ulNumber > 0) {
-        [GC_number setStringValue:[NSString stringWithFormat:@"%u", ulNumber]];
+        [GC_number setStringValue:[NSString stringWithFormat:@"%lu", ulNumber]];
     }
     RetVal = cs->MakeWaypoint(ulNumber);
     [GC_waypoint setStringValue:[NSString stringWithCString:RetVal.c_str() encoding:[NSString defaultCStringEncoding]]];
@@ -444,9 +444,6 @@ WAAS Satellites[9] = {
     [defaults registerDefaults:appDefaults];
 }
 
-
-#define DEFAULT_UNITS_VALUE 2 // meters
-#define UNITS_KEY @"UNITS"
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
