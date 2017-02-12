@@ -2,8 +2,8 @@ FizzyCalc is an utility that takes coordinate strings in a variety of formats an
 
 http://www.jimcarson.com/macfizzycalc/
 
-2.2.1 - 8/28/2011 Updated a bug where entering garbage in the WAAS pulldown would cause a crash.  I haven't uploaded the built binary because of Xcode/code signing issues and unless I have time to deal with these, will just post the binary to my web site.
+2.3 - 2017-02-12 someone had a question on a malformed conversion.  Realized I hadn't organized this to an XCode project (e.g., lacking the project files, one level lower in directory).  Redid that.  Removed WAAS tab because it's not really useful.
 
-As of October 25, 2011, there have been 500 downloads.  Woot!
+2.2.1 - 2011-08-28  Updated a bug where entering garbage in the WAAS pulldown would cause a crash.  I haven't uploaded the built binary because of Xcode/code signing issues and unless I have time to deal with these, will just post the binary to my web site.
 
 FizzyCalc version is Copyright (c) 2011 by Jim Carson (Geocaching.com: jim_carson). It is based on David Knapp's FizzyCalc, which is Copyright (c) 2003 by David Knapp (aka FizzyMagic). 
