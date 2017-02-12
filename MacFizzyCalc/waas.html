@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+            <title>WAAS, EGNOS and MTSTAT</title>
+                <meta name="KEYWORDS" content="dgps,waas,egnos,mtstat,drift,correction,ionosphere,geostationary,delay" />
+    <meta name="description" content="WAAS, EGNOS and MTSTAT satellites." />
+    
+<link rel="stylesheet" href="fizz.css" type="text/css" />
+</head>
+
+<body>
+
+<a href="index.html"><img src="penrose.png" border="0" align="left" alt="penrose triangle"></img></a>
+<H1>WAAS</H1>
+    <a name="WAAS"></a>
+    
+The Wide Area Augmentation System (WAAS, US), EGNOS (Europe), and MTSTAT (Japan) are satellite-based differential GPS systems that provide a correction to GPS data.  These systems rely on stations at well-known locations.  A GPS correction (for the orbit, clock drift, signal delays, etc)[4] can be broadcast through the geostationary satellites.  Certain GPS units can use this additional information to improve position accuracy to better than three meters 95% of the time.
+<br /><br />
+For the purposes of FizzyCalc, the calculation lets you explore which satellites, if any, might be received.  For example, using my home position, it appears that Intelsat's Galaxy 15 is the closest:
+<br />
+<img src="waas.png" alt="Sample WAAS dialog"></img><br />
+Indeed, when I enable WAAS/EGNOS mode on my Garmin, I see Satellite 48 pop up.<br />
+
+<img src="waas2.png" alt="Screen capture from Garmin Oregon 450 showing satellite view with WAAS as #48"></img><br />
+The satellite position information is taken from multiple sources[1],[2],[4], and is believed to be correct as of 6 August 2011.
+
+<hr /><br />
+<b>Sources:</b><br />
+[1] WAAS and its relation to hand-held GPS receivers, <a href="http://www.gpsinformation.net/exe/waas.html" target="_blank">GPSInformation.net</a><br />
+[2] WAAS, EGNOS and MTSTAT background, <a href="http://www.kowoma.de/en/gps/waas_egnos.htm" target="_blank">kowoma.de</a><br />
+[3] <a href="http://www8.garmin.com/aboutGPS/waas.html" target="_blank">Garmin</a>'s web site.<br />
+[4] <a href="http://www.gpsinformation.org/dale/dgps.htm" target="_blank">Dale DePriest</a>.<br />
+[5] <a href="http://www.nstb.tc.faa.gov/RT_WaasSatelliteStatus.htm" target="_blank">Real-time map of sattelites</a>.<br />
+<hr /><br />
+
+<table>
+<tr><td><a href="index.html">Main page</a></td></tr>
+<tr><td><a href="convert.html">Coordinate Formats supported</a></td></tr>
+<tr><td><a href="accuracy.html">Distance and Projection Accuracy</a></td></tr>
+<tr><td><a href="waas.html">WAAS/EGNOS</a></td></tr>
+<tr><td><a href="gc.html">GC Numbers</a></td></tr>
+<tr><td><a href="droot.html">Checksums and Digital Root</a></td></tr>
+</table>
+</body></html>
