@@ -1,14 +1,18 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf230
-{\fonttbl\f0\fnil\fcharset0 LucidaGrande;\f1\fswiss\fcharset0 Helvetica;\f2\fmodern\fcharset0 CourierNewPSMT;
-}
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 LucidaGrande-Bold;\f1\fnil\fcharset0 LucidaGrande;\f2\fswiss\fcharset0 Helvetica;
+\f3\fmodern\fcharset0 CourierNewPSMT;}
 {\colortbl;\red255\green255\blue255;\red45\green5\blue21;\red67\green10\blue31;\red24\green72\blue164;
 \red110\green5\blue0;\red38\green38\blue38;}
+{\*\expandedcolortbl;;\csgenericrgb\c17647\c1961\c8235;\csgenericrgb\c26275\c3922\c12157;\csgenericrgb\c9412\c28235\c64314;
+\csgenericrgb\c43137\c1961\c0;\csgenericrgb\c14902\c14902\c14902;}
 \margl1440\margr1440\vieww9600\viewh8400\viewkind0
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\b\fs24 \cf2 FizzyCalc\cf0  
-\b0 is an utility that takes coordinate strings in a variety of formats and generates copy-and-paste versions of those coordinates in a variety of other formats.   It also does high-accuracy distance calculations and projections using the {\field{\*\fldinst{HYPERLINK "https://secure.wikimedia.org/wikipedia/en/wiki/Vincenty%27s_formulae"}}{\fldrslt Vincenty Method}} for calculating distances on an ellipsoid, which are much more accurate than you can obtain from your GPS.  \
+\f1\b0 is an utility that takes coordinate strings in a variety of formats and generates copy-and-paste versions of those coordinates in a variety of other formats.   It also does high-accuracy distance calculations and projections using the {\field{\*\fldinst{HYPERLINK "https://secure.wikimedia.org/wikipedia/en/wiki/Vincenty%27s_formulae"}}{\fldrslt Vincenty Method}} for calculating distances on an ellipsoid, which are much more accurate than you can obtain from your GPS.  \
 \
+Version 2.4: 64-bit build.  Removed rest of WAAS\
+Version 2.3: Removed WAAS tab\
 Version 2.2.2 update:\
 I fixed a couple of GUI bugs where entering in bogus values for the WAAS satellite would cause the application to hang.  Also the default value for distance is increased to 75.5 meters so the calculation is more interesting.  The application has also been configured to use sandboxing.\
 \
@@ -19,28 +23,28 @@ If you're reading this, I would love a post card from your country or state.  If
      Issaquah, WA 98029-6589\
      USA\
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
 
-\b \cf0 Engineering:
-\b0 \
-	FizzyCalc for the Macintosh is Copyright (c) 2011 by {\field{\*\fldinst{HYPERLINK "http://www.jimcarson.com/"}}{\fldrslt James Carson}} (Geocaching.com: {\field{\*\fldinst{HYPERLINK "http://www.geocaching.com/profile/?guid=f9f906b1-a693-4f34-bf82-35d3663e8f04"}}{\fldrslt jim_carson}}).  It is based on\cf3  \cf0 work Copyright (c) 2003 by {\field{\*\fldinst{HYPERLINK "http://www.fizzymagic.net/"}}{\fldrslt David Knapp}} (Geocaching.com: {\field{\*\fldinst{HYPERLINK "http://www.geocaching.com/profile/?guid=5275e5e9-9c23-4918-ac00-5b8130e257b9"}}{\fldrslt FizzyMagic}}) and used with permission.  The Windows runtime is available {\field{\*\fldinst{HYPERLINK "http://www.fizzymagic.net/Geocaching/FizzyCalc"}}{\fldrslt here}} ({\field{\*\fldinst{HYPERLINK "http://www.fizzymagic.net/Geocaching/FizzyCalc/Source/FizzyCalc.zip"}}{\fldrslt 
+\f0\b \cf0 Engineering:
+\f1\b0 \
+	FizzyCalc for the Macintosh is Copyright (c) 2011 by {\field{\*\fldinst{HYPERLINK "http://www.jimcarson.com/"}}{\fldrslt James Carson}} (Geocaching.com: {\field{\*\fldinst{HYPERLINK "http://www.geocaching.com/profile/?guid=f9f906b1-a693-4f34-bf82-35d3663e8f04"}}{\fldrslt jim_carson}}; radio: WT8P).  It is based on\cf3  \cf0 work Copyright (c) 2003 by {\field{\*\fldinst{HYPERLINK "http://www.fizzymagic.net/"}}{\fldrslt David Knapp}} (Geocaching.com: {\field{\*\fldinst{HYPERLINK "http://www.geocaching.com/profile/?guid=5275e5e9-9c23-4918-ac00-5b8130e257b9"}}{\fldrslt FizzyMagic}}) and used with permission.  The Windows runtime is available {\field{\*\fldinst{HYPERLINK "http://www.fizzymagic.net/Geocaching/FizzyCalc"}}{\fldrslt here}} ({\field{\*\fldinst{HYPERLINK "http://www.fizzymagic.net/Geocaching/FizzyCalc/Source/FizzyCalc.zip"}}{\fldrslt 
 \fs26 \cf4 \ul \ulc4 source}})\
 \
 
-\b Bugs and suggestions:\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\f0\b Bugs and suggestions:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 	
-\b0 \cf5 Please send suggestions and bug reports (ideally, with steps on how to reproduce) to me at {\field{\*\fldinst{HYPERLINK "mailto:jim.carson@gmail.com?Subject=MacFizzyCalc"}}{\fldrslt jim.carson@gmail.com}}.  \cf0 Please let me know if you would like to see this ported to the iPhone/iPad.\cf5 \
+\f1\b0 \cf5 Please send suggestions and bug reports (ideally, with steps on how to reproduce) to me at {\field{\*\fldinst{HYPERLINK "mailto:jim.carson@gmail.com?Subject=MacFizzyCalc"}}{\fldrslt jim.carson@gmail.com}}.  \cf0 Please let me know if you would like to see this ported to the iPhone/iPad.\cf5 \
 \cf0 \
-\pard\pardeftab720\sl360
+\pard\pardeftab720\sl360\partightenfactor0
 \cf6 Mactintosh is a trademark of Apple Inc., registered in the U.S. and other countries.
-\b \cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+\f0\b \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
 
-\f1\b0 \cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+\f2\b0 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
 
-\f2 \cf0 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either {\field{\*\fldinst{HYPERLINK "http://www.gnu.org/licenses/gpl-3.0.html"}}{\fldrslt version 3 of the License}}, or (at your option) any later version.\
+\f3 \cf0 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either {\field{\*\fldinst{HYPERLINK "http://www.gnu.org/licenses/gpl-3.0.html"}}{\fldrslt version 3 of the License}}, or (at your option) any later version.\
  \
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.\
 \
@@ -48,6 +52,6 @@ You should have received a copy of the GNU General Public License along with thi
 \
 \
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\f0 \cf0 Special shout out to geocaching friends FrodoB, PhilNi, pcakes, buffaloed and Muddy Teapot!}
+\f1 \cf0 Special shout out to geocaching friends FrodoB, PhilNi, pcakes, buffaloed and Muddy Teapot!}

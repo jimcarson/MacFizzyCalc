@@ -2,7 +2,7 @@
  FizzyCalcAppDelegate.m
  MacFizzyCalc
  
- Copyright (c) 2011 by James Carson (www.jimcarson.com).  
+ Copyright (c) 2011 by Jim Carson (www.jimcarson.com).  
  Uses geocaching coordinate calculations Copyright (c) 2004 by David Knapp.
  
  This program is free software: you can redistribute it and/or modify
@@ -30,11 +30,7 @@
  *
  * Bugs fixed:
  *  8/28 If no distance value is entered in projection, you end up with NAN.
- *  8/28 If a user entered a bogus value in the combobox for the WAAS satellite, it would crash/hang.  
- Problem was NSComboBox was returning -1, which caused a bad reference into the struct
- definining satellites.  8/28/2011 - fixed
  *  8/28 Change the default distance value so "meters" makes sense.
- *  8/25 WAAS was using P_start instead of W_Coordinate.
  */
 
 #import "MacFizzyCalcAppDelegate.h"
@@ -54,49 +50,12 @@
 #define DEFAULT_DIST_VALUE      @"75.5"
 #define BEARING_KEY             @"BEARING"
 #define DEFAULT_BEARING_VALUE   @"56"
-// For the WAAS tab:
-#define SAT_KEY                 @"SATELLITE"
-#define DEFAULT_SAT_VALUE       0
+
 // For the GC Number conversion
 #define GC_KEY                  @"GCNUMBER"
 #define DEFAULT_GC_VALUE        @"GC2XZKZ"
 
 double units_to_m[UNITS] = { M_TO_FEET, M_TO_KILO, M_TO_M, M_TO_MILE, M_TO_NAUT, M_TO_YARD, M_TO_FIZZIES };
-/*
- 
- WAAS (and equivalent) satellite information was slightly out of date.  Information is current as of 8/8/2011 -- Jim Carson
- And removed from Fizzycalc because it was already obsolete ;-(   2017-02-12
- Sources: 
- http://www.kowoma.de/en/gps/waas_egnos.htm
- http://gpsinformation.net/exe/waas.html
- http://en.wikipedia.org/wiki/Wide_Area_Augmentation_System
- http://www.gpsworld.com/gnss-system/augmentation-assistance/news/waas-prn-135-resumes-normal-operation-11243
- http://en.wikipedia.org/wiki/European_Geostationary_Navigation_Overlay_Service
- http://en.wikipedia.org/wiki/Multi-functional_Satellite_Augmentation_System
- 
- Real-time map of satellite positions and coverage:
- http://www.nstb.tc.faa.gov/RT_WaasSatelliteStatus.htm
- 
- */
-struct WAAS {
-    NSString *name;
-    NSString *shortname;
-    NSString *system;
-    int prn;
-    int nmea;
-    double longitude;
-};
-WAAS Satellites[9] = {
-    {@"Anik F1R (USA - central)",@"Anik", @"WAAS",138,51,-107.3},
-    {@"ARTEMIS (Africa)",@"Artemis", @"EGNOS",124,37,21.5},
-    {@"Inmarsat 3F1 (Indian Ocean)",@"IOR",@"EGNOS",126,39,64.5},
-    {@"Inmarsat 3F2 (Atlantic - east)",@"AOR-E",@"EGNOS",120,33,-15.5},
-    {@"Inmarsat 4F2 (EMEA)",@"IND-W",@"EGNOS",131,44,25.0},
-    {@"Inmarsat 4F3 (USA - east)",@"PAC-E",@"WAAS",133,46,-97.6},
-    {@"Intelsat Galaxy 15 (USA - west)",@"G-15",@"WAAS",135,48,-133.1},
-    {@"MTSat-1R/Himawari 6 (Japan)",@"M1R",@"MTSat",129,42,140.0},
-    {@"MTSat-2/Himawari 7 (Japan)",@"M2",@"MTSat",137,50,145.0}
-};
 
 @implementation MacFizzyCalcAppDelegate
 
@@ -122,7 +81,6 @@ WAAS Satellites[9] = {
         //
         [D_pt1 setStringValue:[CC_CoordString stringValue]];         
         [P_start setStringValue:[CC_CoordString stringValue]];        
-        [W_CoordString setStringValue:[CC_CoordString stringValue]];        
         [CS_CoordString setStringValue:[CC_CoordString stringValue]];
 
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -186,7 +144,6 @@ WAAS Satellites[9] = {
         // Copy the values to the other, similar attributes
         [CC_CoordString setStringValue:[D_pt1 stringValue]];         
         [P_start setStringValue:[D_pt1 stringValue]];        
-        [W_CoordString setStringValue:[D_pt1 stringValue]];        
         [CS_CoordString setStringValue:[D_pt1 stringValue]];
 
         //
@@ -235,7 +192,7 @@ WAAS Satellites[9] = {
     delete pt2;
 }
 
--(void) SetcDefaults: (NSString *) keyname: (NSString *) cvalue: (NSString  *) dcvalue {
+-(void) SetcDefaults: (NSString *) keyname : (NSString *) cvalue : (NSString  *) dcvalue {
    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
    if (std::strcmp((const char *)dcvalue, (const char *)cvalue) == 0) {
       [defaults removeObjectForKey:keyname];
@@ -243,27 +200,8 @@ WAAS Satellites[9] = {
       [defaults setObject:dcvalue forKey:keyname];    
    }
 }
-/*
-+(void) SetiDefaults: (NSString *) keyname: (NSInteger) ivalue: (NSInteger) divalue {
-   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-   if (divalue == ivalue) {
-      [defaults removeObjectForKey:keyname];
-   } else {
-      [defaults setInteger:ivalue forKey:keyname];    
-   }    
-}
 
-+(void) setDefaultCoords: (NSString *) coordstring {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *val = coordstring;
-    if ([val isEqualToString:DEFAULT_COORDS_VALUE]) {
-        [defaults removeObjectForKey:COORD_KEY];
-    } else {
-        [defaults setObject:val forKey:COORD_KEY];
-    }
-}
-*/
-// 
+//
 // Project a point from a point.
 //
 // to do: error checking for the distance and azimuth fields?
@@ -287,7 +225,6 @@ WAAS Satellites[9] = {
         // Update the default units if the user has set them.
         [CC_CoordString setStringValue:[P_start stringValue]];         
         [D_pt1 setStringValue:[P_start stringValue]];         
-        [W_CoordString setStringValue:[P_start stringValue]];        
         [CS_CoordString setStringValue:[P_start stringValue]];
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSInteger ival;
@@ -319,77 +256,6 @@ WAAS Satellites[9] = {
         }
     }
     delete startpoint;
-}
-
-//
-// Calculate the location of a WAAS satellite from the specific point.
-//
--(IBAction)doWAAS:(id)sender {
-    CLatLon *cs = new CLatLon;
-    NSInteger ival = [W_satellite indexOfSelectedItem];
-    
-    if (ival == -1) {
-        //
-        // 08/28/2011 - jim - user selected a value outside of our array, perhaps through
-        // typing bogus information in the field.  Select the default value in the dialog, 
-        // but continue.
-        //
-        [W_satellite selectItemAtIndex:DEFAULT_SAT_VALUE];
-    }
-
-    if (cs->ParseCoords([[W_CoordString stringValue] UTF8String])== FALSE) {
-        // NSLog(@"WAAS coordinate is not in a recognized format.\n");
-        [[sender window] makeFirstResponder:W_CoordString]; // send focus back to the field in error
-        [W_CoordString setTextColor:[NSColor ERRORCOLOR]];
-    } else {
-        [W_CoordString setTextColor:[NSColor blackColor]];
-        double Azimuth, Elevation;
-        double dDistance;
-        double dSatLon = Satellites[[W_satellite indexOfSelectedItem]].longitude;
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSInteger ival;
-        NSString *val = [W_CoordString stringValue];
-        // Update the default units if the user has set them.
-        [CC_CoordString setStringValue:[W_CoordString stringValue]];         
-        [D_pt1 setStringValue:[W_CoordString stringValue]];         
-        [P_start setStringValue:[W_CoordString stringValue]];        
-        [CS_CoordString setStringValue:[W_CoordString stringValue]];
-
-        ival = [W_satellite indexOfSelectedItem];
-        if (ival == DEFAULT_SAT_VALUE) {
-            [defaults removeObjectForKey:SAT_KEY];
-        } else {
-            [defaults setInteger:ival forKey:SAT_KEY];
-        } 
-        if ([val isEqualToString:DEFAULT_COORDS_VALUE]) {
-            [defaults removeObjectForKey:COORD_KEY];
-        } else {
-            [defaults setObject:val forKey:COORD_KEY];
-        }
-        
-        if ([W_accuracy selectedCell] == [W_accuracy cellWithTag:1]) {
-            dDistance = cs->GeoSatelliteAzElSpherical(dSatLon, 0., &Azimuth, &Elevation);
-        } else {
-            dDistance = cs->GeoSatelliteAzEl(dSatLon, 0., &Azimuth, &Elevation);
-        }
-        /**/
-        
-        [W_azimuth setStringValue:[NSString stringWithFormat:@"%3.2lf", Azimuth]];
-        
-        if (Elevation > 0.) {
-            [W_elevation setStringValue:[NSString stringWithFormat:@"%3.2lf", Elevation]];
-            [W_elevation setTextColor:[NSColor blackColor]];
-        } else {
-            [W_elevation setStringValue:@"Below horizon"];
-            [W_elevation setTextColor:[NSColor ERRORCOLOR]];
-        }
-        
-        [W_satname setStringValue:Satellites[[W_satellite indexOfSelectedItem]].shortname];
-        [W_satnum setIntValue:Satellites[[W_satellite indexOfSelectedItem]].nmea];
-        [W_system setStringValue:Satellites[[W_satellite indexOfSelectedItem]].system];
-        [W_satlong setIntValue:dSatLon];
-    }
-    delete cs;
 }
 
 -(IBAction)doGCNumber:(id)sender {
@@ -454,7 +320,6 @@ WAAS Satellites[9] = {
     //
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSInteger   unitsval = [defaults integerForKey:UNITS_KEY];
-    NSInteger   satval  = [defaults integerForKey:SAT_KEY];
     NSString    *coordsval = [defaults stringForKey:COORD_KEY];
     NSString    *coordsval2 =[defaults stringForKey:COORD_KEY2]; 
     // 10/06/2011 - these aren't used.  
@@ -470,8 +335,6 @@ WAAS Satellites[9] = {
     [P_units selectItemAtIndex:unitsval];
     [P_distance setStringValue:DEFAULT_DIST_VALUE];
     [P_bearing  setStringValue:DEFAULT_BEARING_VALUE];
-    [W_CoordString setStringValue:coordsval];
-    [W_satellite selectItemAtIndex:satval];
     [CS_CoordString setStringValue:coordsval];
     [GC_input setStringValue:DEFAULT_GC_VALUE];
     

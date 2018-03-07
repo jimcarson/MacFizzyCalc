@@ -11,8 +11,6 @@ coordinates.html -- Finished parsing
 accuracy.html -- File has KEYWORDS meta tag content being indexed.
 waas.html -- File has KEYWORDS meta tag content being indexed.
 accuracy.html -- File has DESCRIPTION meta tag used for abstract.
-waas.html -- File has DESCRIPTION meta tag used for abstract.
-waas.html -- Finished parsing
 accuracy.html -- Finished parsing
 convert.html -- File has KEYWORDS meta tag content being indexed.
 convert.html -- File has DESCRIPTION meta tag used for abstract.

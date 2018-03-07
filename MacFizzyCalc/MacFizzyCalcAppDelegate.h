@@ -57,17 +57,6 @@
     IBOutlet NSTextField    *P_bearing;
     IBOutlet NSTextField    *P_result;
     
-    // WAAS tab
-    IBOutlet NSTextField    *W_CoordString;
-    IBOutlet NSMatrix       *W_accuracy;
-    IBOutlet NSComboBox     *W_satellite;
-    IBOutlet NSTextField    *W_satnum;
-    IBOutlet NSTextField    *W_satlong;
-    IBOutlet NSTextField    *W_satname;
-    IBOutlet NSTextField    *W_azimuth;
-    IBOutlet NSTextField    *W_system;
-    IBOutlet NSTextField    *W_elevation;
-    
     // GC number tab
     IBOutlet NSTextField    *GC_input;
     IBOutlet NSTextField    *GC_waypoint;
@@ -88,7 +77,6 @@
 -(IBAction)doConvert:(id)sender;
 -(IBAction)doDistance:(id)sender;
 -(IBAction)doProjection:(id)sender;
--(IBAction)doWAAS:(id)sender;
 -(IBAction)doGCNumber:(id)sender;
 -(IBAction)doChecksum:(id)sender;
 @end
