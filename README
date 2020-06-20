@@ -1,6 +1,6 @@
 FizzyCalc is an utility that takes coordinate strings in a variety of formats and generates copy-and-paste versions of those coordinates in a variety of other formats. It does high-accuracy distance calculations and projections using the Vicenty Method for calculating distances on an ellipsoid. These calculations are much better than you can obtain from your GPS unit!
 
-http://www.jimcarson.com/macfizzycalc/
+http://www.jimc.in/macfizzycalc/index.html
 
 2.4 - 2018-03-06 Completely removed all WAAS code, cleaned up compiler messages on the newer XCode, buitl for 64-bit, Mac OS 10.12.
 
@@ -10,9 +10,9 @@ http://www.jimcarson.com/macfizzycalc/
 
 Now that it's off the App Store, here's the download link: 
 
-Current: http://www.jimcarson.com/macfizzycalc/FizzyCalc24.zip
+Current: https://www.jimc.in/macfizzycalc/fizzycalc_current.zip
 (Unzip, move to /Applications or ~/Applications)
 
-32-bit version for older Mac OS 10.6: http://www.jimcarson.com/macfizzycalc/fizzy32bit.tgz
+32-bit version for older Mac OS 10.6: http://www.jimc.in/macfizzycalc/fizzy32bit.tgz
 
 FizzyCalc version is Copyright (c) 2011 by Jim Carson (Geocaching.com: jim_carson). It is based on David Knapp's FizzyCalc, which is Copyright (c) 2003 by David Knapp (aka FizzyMagic). 
